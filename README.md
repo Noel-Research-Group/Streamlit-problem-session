@@ -3,18 +3,18 @@ Repository for the Chemical Engineering problem session of Thursday February 17,
 
 ___
 
-## Getting ready
-###1. Install PyCharm CE
+### Getting ready
+#### 1. Install PyCharm CE
 
 To edit and run Python code, we will use an integrated development environment (IDE).
 To install PyCharm Community Edition, head to its [website](https://www.jetbrains.com/pycharm/download/#section=windows) and download the installer.
 
-###2. Install Anaconda Individual Edition
+#### 2. Install Anaconda Individual Edition
 
 To manage Python packages (pre-built, open-source code) and virtual environements, we use Conda.
 To use Conda, install Anaconda Individual Edition from [here](https://www.anaconda.com/products/individual).
 
-###3. Clone the repository
+#### 3. Clone the repository
 (**Note:** the repository is a work in progress, so wait till Thursday)
 
 PyCharm should guide you to create a project when first opened. If that is not the case, choose `File` from the menu, then `New Project...`.
@@ -33,7 +33,7 @@ and set the directory to be the one of the project you created.
 
 When you are done, you should see new files appearing. No new files showing up? Pat pat, there there.
 
-###4. Adjust interpreter settings
+#### 4. Adjust interpreter settings
 At the top, choose `File` --> `Settings`. In the window that opens, select `Project: blah blah` and then `Python Interpreter` from the list on the left (you should see something like the image below).
 
 ![](Interpreter_settings.png)
@@ -44,7 +44,7 @@ Click on the gear icon, select `Conda Environment`, leave everything as it is, e
 
 `OK` your way back to the underlying IDE. It may take a moment for the environment to fully set up (loading bar at the bottom).
 
-###5. Install the requirements
+#### 5. Install the requirements
 
 At the bottom, choose the Terminal tab. Write the following code and hit enter.
 ```
