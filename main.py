@@ -24,12 +24,12 @@ uva_logo = Image.open('UvA_logo.jpg')
 with header[0]:
     st.image(
         image=nrg_logo,
-        width=3,
+        # width=3,
     )
     with header[0]:
         st.image(
             image=uva_logo,
-            width=2,
+            # width=2,
         )
 
 st.title('Stoichiometry in Gas-Liquid flow reactions')
