@@ -73,7 +73,7 @@ def volumetric_gas_and_liquid_flow_rates(
 
     x = solve(A, b)
 
-    gas_flow_rate_STP = x[0]
-    liquid_flow_rate = x[1]
+    gas_flow_rate_STP = x[0][0]
+    liquid_flow_rate = x[1][0]
 
     return gas_flow_rate_STP, liquid_flow_rate
