@@ -34,6 +34,7 @@ scenario = st.radio(
 )
 
 if scenario == 'Loop filling':
+    # LOOP FILLING
     with st.sidebar:
         st.subheader('Experimental parameters:')
         st.markdown('**Gas**')
@@ -64,6 +65,7 @@ if scenario == 'Loop filling':
             help='Type in the density of the gas. Pay attention to its units.',
             key='gas-density',
         )
+        st.markdown('___')
         st.markdown('**Liquid**')
         liquid_flow_rate = st.number_input(
             label='Flow rate of the liquid [mL/min]',
@@ -98,8 +100,38 @@ if scenario == 'Loop filling':
 
 
 else:
+    # CONTINUOUS FLOW
     with st.sidebar:
         st.subheader('Experimental parameters:')
+        st.markdown('**Overall**')
+        residence_time = st.slider(
+            label='Residence time [min]',
+            min_value=0.0,
+            max_value=30.0,
+            value=10.0,
+            step=0.5,
+            help='Set the slider to the desired residence time. Mind the units.',
+            key='residence-time',
+        )
+        reactor_volume = st.number_input(
+            label='Reactor volume [mL]',
+            min_value=0.0,
+            max_value=15.0,
+            value=5.0,
+            step=0.1,
+            help='Type in the desired reactor volume. Mind the units.',
+            key='reactor-volume',
+        )
+        pressure = st.number_input(
+            label='Pressure (BPR + pressure drop) [bar]',
+            min_value=0.0,
+            max_value=45.0,
+            value=9.0,
+            step=1,
+            help='Type in the desired pressure. Mind the units.',
+            key='pressure',
+        )
+        st.markdown('___')
         st.markdown('**Gas**')
         gas_equivalents = st.number_input(
             label='Gas equivalents',
@@ -128,16 +160,8 @@ else:
             help='Type in the density of the gas. Pay attention to its units.',
             key='gas-density',
         )
+        st.markdown('___')
         st.markdown('**Liquid**')
-        liquid_flow_rate = st.number_input(
-            label='Flow rate of the liquid [mL/min]',
-            min_value=0.0,
-            max_value=1.5,
-            value=0.5,
-            step=0.005,
-            help='Set the slider to the flow rate of the liquid. Mind the units.',
-            key='liquid-flow-rate',
-        )
         liquid_concentration = st.number_input(
             label='Concentration of substrate in solution [mmol/mL]',
             min_value=0.0,
@@ -146,5 +170,26 @@ else:
             step=0.05,
             help='Type in the susbtrate concentration. Mind the units.',
             key='liquid-concentration',
+        )
+
+    gas_flow, liquid_flow = volumetric_gas_and_liquid_flow_rates(
+        pressure=pressure,
+        gas_equivalents=gas_equivalents,
+        liquid_concentration=liquid_concentration,
+        gas_molecular_weight=gas_molecular_weight,
+        gas_mass_density=gas_mass_density,
+        residence_time=residence_time,
+        reactor_volume=reactor_volume,
+    )
+    columns = st.columns(3)
+    with columns[0]:
+        st.metric(
+            label='Volumetric gas flow rate',
+            value=f'{gas_flow:5.2f} mL/min'
+        )
+    with columns[1]:
+        st.metric(
+            label='Volumetric liquid flow rate',
+            value=f'{liquid_flow:5.2f} mL/min'
         )
 
