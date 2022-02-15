@@ -215,8 +215,10 @@ else:
             'The molar flow rates determine the stoichiometric ratio:')
         st.latex(
             r'''
-            \dot{n}_{substrate} = c_{substrate} \cdot \dot{v}_{substrate} \\ \\
-            \dot{n}_{gas} = Eq \cdot \dot{n}_{substrate} = Eq \cdot c_{substrate} \cdot \dot{v}_{substrate} \\ \\
+            \dot{n}_{substrate} = c_{substrate} \cdot \dot{v}_{substrate} \\
+            \newline
+            \dot{n}_{gas} = Eq \cdot \dot{n}_{substrate} = Eq \cdot c_{substrate} \cdot \dot{v}_{substrate} \\
+            \newline
             \dot{v}_{gas} = \frac{MW_{gas}}{\rho_{mass, gas}} \cdot \dot{n}_{gas} = \frac{MW_{gas}}{\rho_{mass, gas}} \cdot Eq \cdot c_{substrate} \cdot \dot{v}_{substrate}
             '''
         )
