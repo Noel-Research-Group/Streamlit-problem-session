@@ -26,7 +26,7 @@ with header[0]:
         image=nrg_logo,
         # width=3,
     )
-    with header[0]:
+    with header[6]:
         st.image(
             image=uva_logo,
             # width=2,
