@@ -68,9 +68,9 @@ if scenario == 'Loop filling':
         liquid_flow_rate = st.slider(
             label='Flow rate of the liquid [mL/min]',
             min_value=0.0,
-            max_value=20.0,
-            value=10.0,
-            step=0.2,
+            max_value=1.5,
+            value=0.5,
+            step=0.005,
             help='Set the slider to the flow rate of the liquid. Mind the units.',
             key='liquid-flow-rate',
         )
@@ -132,9 +132,9 @@ else:
         liquid_flow_rate = st.slider(
             label='Flow rate of the liquid [mL/min]',
             min_value=0.0,
-            max_value=20.0,
-            value=10.0,
-            step=0.2,
+            max_value=1.5,
+            value=0.5,
+            step=0.005,
             help='Set the slider to the flow rate of the liquid. Mind the units.',
             key='liquid-flow-rate',
         )
