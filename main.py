@@ -65,7 +65,7 @@ if scenario == 'Loop filling':
             key='gas-density',
         )
         st.markdown('**Liquid**')
-        liquid_flow_rate = st.slider(
+        liquid_flow_rate = st.number_input(
             label='Flow rate of the liquid [mL/min]',
             min_value=0.0,
             max_value=1.5,
@@ -129,7 +129,7 @@ else:
             key='gas-density',
         )
         st.markdown('**Liquid**')
-        liquid_flow_rate = st.slider(
+        liquid_flow_rate = st.number_input(
             label='Flow rate of the liquid [mL/min]',
             min_value=0.0,
             max_value=1.5,
