@@ -96,6 +96,16 @@ if scenario == 'Loop filling':
             key='liquid-concentration',
         )
 
+    with st.expander('How to calculate the solution:'):
+        st.markdown('With the loop filling method, the stoichiometric ratio is simply determined by the ratio of the molar flow rates. Pressure (and volumes) are **not** relevant.')
+        st.latex(
+            r'''
+            a + ar + a r^2 + a r^3 + \cdots + a r^{n-1} =
+            \sum_{k=0}^{n-1} ar^k =
+            a \left(\frac{1-r^{n}}{1-r}\right)
+            '''
+        )
+
     loop_filling_result = volumetric_gas_flow_rate(
         liquid_flow_rate=liquid_flow_rate,
         liquid_concentration=liquid_concentration,
@@ -180,6 +190,9 @@ else:
             help='Type in the susbtrate concentration. Mind the units.',
             key='liquid-concentration',
         )
+
+    with st.expander('How to calculate the solution:'):
+        None
 
     gas_flow, liquid_flow = volumetric_gas_and_liquid_flow_rates(
         pressure=pressure,
