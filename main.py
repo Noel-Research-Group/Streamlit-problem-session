@@ -37,12 +37,12 @@ if scenario == 'Loop filling':
     with st.sidebar:
         st.subheader('Experimental parameters:')
         st.markdown('**Gas**')
-        gas_equivalents = st.slider(
+        gas_equivalents = st.number_input(
             label='Gas equivalents',
             min_value=0.0,
-            max_value=20.0,
+            max_value=40.0,
             value=10.0,
-            step=0.5,
+            step=0.1,
             help='Gas:Substrate stoichiometric ratio',
             key='equivalents',
         )
@@ -101,12 +101,12 @@ else:
     with st.sidebar:
         st.subheader('Experimental parameters:')
         st.markdown('**Gas**')
-        gas_equivalents = st.slider(
+        gas_equivalents = st.number_input(
             label='Gas equivalents',
             min_value=0.0,
-            max_value=20.0,
+            max_value=40.0,
             value=10.0,
-            step=0.5,
+            step=0.1,
             help='Gas:Substrate stoichiometric ratio',
             key='equivalents',
         )
