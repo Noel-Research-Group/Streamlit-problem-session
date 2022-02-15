@@ -203,7 +203,27 @@ else:
         )
 
     with st.expander('How to calculate the solution:'):
-        None
+        st.markdown(
+            'With the continuous flow method, the stoichiometric ratio is still determined by the **ratio of the molar flow rates**, but the **sum of the volumetric flow rates** will determine the residence time.')
+        st.markdown('The total flow rate is:')
+        st.latex(
+            r'''
+            \dot{v}_{total} = \dot{v}_{gas, @p} + \dot{v}_{substrate} = \frac{\dot{v}_{gas, STP}}{p} + \dot{v}_{substrate}
+            '''
+        )
+        st.markdown(
+            'The molar flow rate for the gas is obtained considering the number of equivalents:')
+        st.latex(
+            r'''
+            \dot{n}_{gas} = Eq \cdot \dot{n}_{substrate}
+            '''
+        )
+        st.markdown('The volumetric gas flow rate (STP) is:')
+        st.latex(
+            r'''
+            \dot{v}_{gas} = \frac{MW_{gas}}{\rho_{mass, gas}} \cdot \dot{n}_{gas}
+            '''
+        )
 
     gas_flow, liquid_flow = volumetric_gas_and_liquid_flow_rates(
         pressure=pressure,
