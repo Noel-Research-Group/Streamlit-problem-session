@@ -12,7 +12,7 @@ from gas_equations import *
 
 # Streamlit page setup
 st.set_page_config(
-    page_title="Vial info encoder",  # label displayed by the browser
+    page_title="Gas-Liquid flow reaction calculator",  # label displayed by the browser
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -22,15 +22,9 @@ header = st.columns(7)
 nrg_logo = Image.open('NRG Logo_300dpi_ 863x400px.png')
 uva_logo = Image.open('UvA_logo.jpg')
 with header[0]:
-    st.image(
-        image=nrg_logo,
-        # width=3,
-    )
-    with header[6]:
-        st.image(
-            image=uva_logo,
-            # width=2,
-        )
+    st.image(image=nrg_logo)
+with header[6]:
+    st.image(image=uva_logo)
 
 st.title('Stoichiometry in Gas-Liquid flow reactions')
 st.markdown('*D.Pintossi, February 2022*')
