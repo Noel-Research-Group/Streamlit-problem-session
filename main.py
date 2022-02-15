@@ -101,13 +101,13 @@ if scenario == 'Loop filling':
         st.markdown('The molar flow rate for the substrate is:')
         st.latex(
             r'''
-            \dot{n}_{substrate} = Eq \cdot \dot{v}_{substrate}
+            \dot{n}_{substrate} = c_{substrate} \cdot \dot{v}_{substrate}
             '''
         )
         st.markdown('The molar flow rate for the gas is obtained considering the number of equivalents:')
         st.latex(
             r'''
-            \dot{n}_{gas} = c_{substrate} \cdot \dot{n}_{substrate}
+            \dot{n}_{gas} = Eq \cdot \dot{n}_{substrate}
             '''
         )
 
