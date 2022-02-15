@@ -208,20 +208,22 @@ else:
         st.markdown('The total flow rate is:')
         st.latex(
             r'''
-            \dot{v}_{total} = \dot{v}_{gas, @p} + \dot{v}_{substrate} = \frac{\dot{v}_{gas, STP}}{p} + \dot{v}_{substrate}
+            \dot{v}_{total} = \dot{v}_{gas, p} + \dot{v}_{substrate} = \frac{\dot{v}_{gas, STP}}{p} + \dot{v}_{substrate}
             '''
         )
         st.markdown(
-            'The molar flow rate for the gas is obtained considering the number of equivalents:')
+            'The molar flow rates determine the stoichiometric ratio:')
         st.latex(
             r'''
-            \dot{n}_{gas} = Eq \cdot \dot{n}_{substrate}
+            \dot{n}_{substrate} = c_{substrate} \cdot \dot{v}_{substrate}
+            \dot{n}_{gas} = Eq \cdot \dot{n}_{substrate} = Eq \cdot c_{substrate} \cdot \dot{v}_{substrate}
+            \dot{v}_{gas} = \frac{MW_{gas}}{\rho_{mass, gas}} \cdot \dot{n}_{gas} = \frac{MW_{gas}}{\rho_{mass, gas}} \cdot Eq \cdot c_{substrate} \cdot \dot{v}_{substrate}
             '''
         )
-        st.markdown('The volumetric gas flow rate (STP) is:')
+        st.markdown('The two conditions give the following linear system:')
         st.latex(
             r'''
-            \dot{v}_{gas} = \frac{MW_{gas}}{\rho_{mass, gas}} \cdot \dot{n}_{gas}
+            
             '''
         )
 
