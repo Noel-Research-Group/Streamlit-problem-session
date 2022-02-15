@@ -49,7 +49,7 @@ if scenario == 'Loop filling':
             value=80,
             step=1,
             help='Type in the molecular weight of the gas. Pay attention to its units.',
-            key='equivalents',
+            key='gas-MW',
         )
         gas_mass_density = st.number_input(
             label='Gas density [mg/mL]',
@@ -58,7 +58,7 @@ if scenario == 'Loop filling':
             value=1.00,
             step=0.01,
             help='Type in the density of the gas. Pay attention to its units.',
-            key='equivalents',
+            key='gas-density',
         )
 
 else:
@@ -80,7 +80,7 @@ else:
             value=80,
             step=1,
             help='Type in the molecular weight of the gas. Pay attention to its units.',
-            key='equivalents',
+            key='gas-MW',
         )
         gas_mass_density = st.number_input(
             label='Gas density [mg/mL]',
@@ -89,5 +89,5 @@ else:
             value=1.00,
             step=0.01,
             help='Type in the density of the gas. Pay attention to its units.',
-            key='equivalents',
+            key='gas-density',
         )
