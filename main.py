@@ -8,7 +8,8 @@ D.Pintossi
 
 import streamlit as st
 
-st.title('Title')
+st.title('Stoichiometry in Gas-Liquid reactions')
+st.subheader('(in flow)')
 
 st.button(
     label='Hoi! Ik ben Benji'
