@@ -21,11 +21,10 @@ st.set_page_config(
 header = st.columns([3, 1, 1, 1, 1, 1, 1, 1])
 nrg_logo = Image.open('NRG Logo_300dpi_ 863x400px.png')
 uva_logo = Image.open('UvA_logo.jpg')
-with st.container:
-    with header[0]:
-        st.image(image=nrg_logo, use_column_width=True)
-    with header[6]:
-        st.image(image=uva_logo, use_column_width=True)
+with header[0]:
+    st.image(image=nrg_logo, use_column_width=True)
+with header[6]:
+    st.image(image=uva_logo, use_column_width=True)
 
 st.title('Stoichiometry in Gas-Liquid flow reactions')
 st.markdown('*D.Pintossi, February 2022*')
