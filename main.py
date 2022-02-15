@@ -18,6 +18,8 @@ st.set_page_config(
 st.title('Stoichiometry in Gas-Liquid reactions')
 st.subheader('(in flow)')
 
+st.markdown('*This Streamlit app is a work in progress*')
+
 st.button(
     label='Hoi! Ik ben Benji'
 )
