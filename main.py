@@ -34,27 +34,27 @@ if scenario == 'Loop filling':
     with st.sidebar:
         st.subheader('Experimental parameters:')
         gas_equivalents = st.number_input(
-            label='Gas equivalents [-]',
-            min_value=0,
-            max_value=20,
-            value=10,
-            step=1,
-            help='Type in the Gas:Substrate stoichiometric ratio',
+            label='Gas equivalents',
+            min_value=0.0,
+            max_value=20.0,
+            value=10.0,
+            step=1.0,
+            help='Gas:Substrate stoichiometric ratio',
             key='equivalents',
         )
         gas_molecular_weight = st.number_input(
             label='Gas molecular weight [mg/mmol]',
-            min_value=0,
-            max_value=1500,
-            value=80,
-            step=1,
+            min_value=0.0,
+            max_value=1500.0,
+            value=80.0,
+            step=1.0,
             help='Type in the molecular weight of the gas. Pay attention to its units.',
             key='gas-MW',
         )
         gas_mass_density = st.number_input(
             label='Gas density [mg/mL]',
-            min_value=0,
-            max_value=2,
+            min_value=0.0,
+            max_value=2.0,
             value=1.00,
             step=0.01,
             help='Type in the density of the gas. Pay attention to its units.',
@@ -66,26 +66,26 @@ else:
         st.subheader('Experimental parameters:')
         gas_equivalents = st.number_input(
             label='Gas equivalents',
-            min_value=0,
-            max_value=20,
-            value=10,
-            step=1,
+            min_value=0.0,
+            max_value=20.0,
+            value=10.0,
+            step=1.0,
             help='Gas:Substrate stoichiometric ratio',
             key='equivalents',
         )
         gas_molecular_weight = st.number_input(
             label='Gas molecular weight [mg/mmol]',
-            min_value=0,
-            max_value=1500,
-            value=80,
-            step=1,
+            min_value=0.0,
+            max_value=1500.0,
+            value=80.0,
+            step=1.0,
             help='Type in the molecular weight of the gas. Pay attention to its units.',
             key='gas-MW',
         )
         gas_mass_density = st.number_input(
             label='Gas density [mg/mL]',
-            min_value=0,
-            max_value=2,
+            min_value=0.0,
+            max_value=2.0,
             value=1.00,
             step=0.01,
             help='Type in the density of the gas. Pay attention to its units.',
