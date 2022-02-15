@@ -23,6 +23,7 @@ st.markdown('*D.Pintossi, February 2022*')
 st.markdown('*This Streamlit app is a work in progress*')
 with st.expander('Disclaimer:'):
     st.markdown('This app was developed to show a possible use case of Streamlit within an academic environment. There are a bunch of assumptions underlying it. Despite validation against selected scenarios, no one guarantees that its results are correct.')
+st.markdown('___')
 
 scenario = st.radio(
     label='Select the configuration for your Gas-Liquid flow reaction:',
@@ -70,9 +71,29 @@ if scenario == 'Loop filling':
             max_value=20.0,
             value=10.0,
             step=0.2,
-            help='Gas:Substrate stoichiometric ratio',
+            help='Set the slider to the flow rate of the liquid. Mind the units.',
             key='liquid-flow-rate',
         )
+        liquid_concentration = st.number_input(
+            label='Concentration of substrate in solution [mmol/mL]',
+            min_value=0.0,
+            max_value=5.0,
+            value=0.5,
+            step=0.05,
+            help='Type in the susbtrate concentration. Mind the units.',
+            key='liquid-concentration',
+        )
+
+    st.metric(
+        label='Volumetric gas flow rate [mL/min]',
+        value=volumetric_gas_flow_rate(
+            liquid_flow_rate=liquid_flow_rate,
+            liquid_concentration=liquid_concentration,
+            gas_equivalents=gas_equivalents,
+            molecular_weight=gas_molecular_weight,
+            mass_gas_density=gas_mass_density,
+        )
+    )
 
 
 else:
@@ -107,4 +128,22 @@ else:
             key='gas-density',
         )
         st.markdown('**Liquid**')
+        liquid_flow_rate = st.slider(
+            label='Flow rate of the liquid [mL/min]',
+            min_value=0.0,
+            max_value=20.0,
+            value=10.0,
+            step=0.2,
+            help='Set the slider to the flow rate of the liquid. Mind the units.',
+            key='liquid-flow-rate',
+        )
+        liquid_concentration = st.number_input(
+            label='Concentration of substrate in solution [mmol/mL]',
+            min_value=0.0,
+            max_value=5.0,
+            value=0.5,
+            step=0.05,
+            help='Type in the susbtrate concentration. Mind the units.',
+            key='liquid-concentration',
+        )
 
