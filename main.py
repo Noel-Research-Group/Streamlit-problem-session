@@ -110,6 +110,12 @@ if scenario == 'Loop filling':
             \dot{n}_{gas} = Eq \cdot \dot{n}_{substrate}
             '''
         )
+        st.markdown('The volumetric gas flow rate (STP) is:')
+        st.latex(
+            r'''
+            \dot{v}_{gas} = \frac{MW_{gas}}{\ro_{mass, gas}} \cdot \dot{n}_{gas}
+            '''
+        )
 
     loop_filling_result = volumetric_gas_flow_rate(
         liquid_flow_rate=liquid_flow_rate,
