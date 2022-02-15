@@ -27,7 +27,7 @@ Note that you do **not** want a `main.py` file to be automatically created, as t
 
 In the PyCharm GUI, check the menu at the top. Click on `Git` and from the dropdown menu choose `Clone...`.
 
-Alternatively, if Git is not displayed, you will find `VCS` and from the dropdown menu you have to choose `Get from VCS...`.
+Alternatively, if `Git` is not displayed, you will find `VCS` and from the dropdown menu you have to choose `Get from VCS...`.
 
 Use the following URL:
 ```
