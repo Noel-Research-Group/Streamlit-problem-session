@@ -31,6 +31,11 @@ st.markdown('*D.Pintossi, February 2022*')
 
 with st.expander('Disclaimer:'):
     st.markdown('This app was developed to show a possible use case of Streamlit within an academic environment. There are a bunch of assumptions underlying it. Despite validation against selected scenarios, no one guarantees that its results are correct.')
+with st.expander('Assumptions:'):
+    st.markdown('- 1 bar = 1 atm (~ 1% error)')
+    st.markdown('- validity of the ideal gas law')
+    st.markdown('- negligible effect of geometry (e.g., shorter capillary with larger ID vs. longer one with smaller ID)')
+
 st.markdown('___')
 
 # Selection of the experimental design
