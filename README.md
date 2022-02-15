@@ -1,8 +1,9 @@
 # Streamlit-problem-session
+*- D. Pintossi, February 2022 -*
+
 Repository for the Chemical Engineering problem session of Thursday February 17, 2022. We will use Python and Streamlit to create an interactive web app based on the content of Fabian's problem session (stoichiometry in gas-liquid reactions).
 
 The resulting web app is hosted [here](https://share.streamlit.io/noel-research-group/streamlit-problem-session/main/main.py).
-*(just a placeholder there for now)*
 
 ___
 
