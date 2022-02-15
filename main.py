@@ -248,7 +248,7 @@ else:
             \end{bmatrix}
             \cdot
             \begin{bmatrix}
-                \dot{v}_{gas} \\
+                \dot{v}_{gas, STP} \\
                 \dot{v}_{substrate}
             \end{bmatrix}
             =
