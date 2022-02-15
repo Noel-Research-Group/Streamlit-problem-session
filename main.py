@@ -189,8 +189,8 @@ else:
         )
     with columns[1]:
         st.metric(
-            label='Volumetric gas flow rate (STP)',
-            value=f'{gas_flow:5.2f} mL/min'
+            label=f'Volumetric gas flow rate at {pressure} bar',
+            value=f'{gas_flow / pressure:5.2f} mL/min'
         )
     with columns[2]:
         st.metric(
