@@ -19,12 +19,11 @@ st.set_page_config(
 st.title('Stoichiometry in Gas-Liquid flow reactions')
 st.markdown('*D.Pintossi, February 2022*')
 
-# TODO remove when finished
-st.markdown('*This Streamlit app is a work in progress*')
 with st.expander('Disclaimer:'):
     st.markdown('This app was developed to show a possible use case of Streamlit within an academic environment. There are a bunch of assumptions underlying it. Despite validation against selected scenarios, no one guarantees that its results are correct.')
 st.markdown('___')
 
+# Selection of the experimental design
 scenario = st.radio(
     label='Select the configuration for your Gas-Liquid flow reaction:',
     options=['Loop filling', 'Continuous flow'],
@@ -33,6 +32,7 @@ scenario = st.radio(
     help='Choose the scenario corresponding to your experimental design.'
 )
 
+# Inputs and outputs for the two scenarios
 if scenario == 'Loop filling':
     # LOOP FILLING
     with st.sidebar:
@@ -97,7 +97,6 @@ if scenario == 'Loop filling':
         label='Volumetric gas flow rate',
         value=f'{loop_filling_result:5.2f} mL/min'
     )
-
 
 else:
     # CONTINUOUS FLOW
@@ -184,12 +183,19 @@ else:
     columns = st.columns(3)
     with columns[0]:
         st.metric(
-            label='Volumetric gas flow rate',
-            value=f'{gas_flow:5.2f} mL/min'
+            label='Volumetric gas flow rate (STP)',
+            value=f'{gas_flow:5.2f} mL/min',
+            delta='Set this one on the MFC',
         )
     with columns[1]:
         st.metric(
+            label='Volumetric gas flow rate (STP)',
+            value=f'{gas_flow:5.2f} mL/min'
+        )
+    with columns[2]:
+        st.metric(
             label='Volumetric liquid flow rate',
-            value=f'{liquid_flow:5.2f} mL/min'
+            value=f'{liquid_flow:5.2f} mL/min',
+            delta='Set this one on the pump',
         )
 
