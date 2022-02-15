@@ -66,10 +66,10 @@ def volumetric_gas_and_liquid_flow_rates(
     a11 = 1 / pressure  # 1% error by considering 1 atm = 1 bar
     a22 = - gas_molecular_weight * gas_equivalents * liquid_concentration \
             / gas_mass_density
-    A = np.array([a11, 1], [1, a22])
+    A = np.array([[a11, 1], [1, a22]])
 
     b1 = reactor_volume / residence_time
-    b = np.array([b1], [0])
+    b = np.array([[b1], [0]])
 
     x = solve(A, b)
 
