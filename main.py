@@ -243,7 +243,7 @@ else:
         st.latex(
             r'''
             \begin{bmatrix}
-                \frac{}{} & 1 \\
+                \frac{1}{p} & 1 \\
                 1 & - \frac{MW_{gas}}{\rho_{mass, gas}} \cdot Eq \cdot c_{substrate}
             \end{bmatrix}
             \cdot
