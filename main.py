@@ -21,6 +21,8 @@ st.markdown('*D.Pintossi, February 2022*')
 
 # TODO remove when finished
 st.markdown('*This Streamlit app is a work in progress*')
+with st.expander('Disclaimer:'):
+    st.markdown('This app was developed to show a possible use case of Streamlit within an academic environment. There are a bunch of assumptions underlying it. Despite validation against selected scenarios, no one guarantees that its results are correct.')
 
 scenario = st.radio(
     label='Select the configuration for your Gas-Liquid flow reaction:',
@@ -33,12 +35,13 @@ scenario = st.radio(
 if scenario == 'Loop filling':
     with st.sidebar:
         st.subheader('Experimental parameters:')
-        gas_equivalents = st.number_input(
+        st.markdown('**Gas**')
+        gas_equivalents = st.slider(
             label='Gas equivalents',
             min_value=0.0,
             max_value=20.0,
             value=10.0,
-            step=1.0,
+            step=0.5,
             help='Gas:Substrate stoichiometric ratio',
             key='equivalents',
         )
@@ -60,16 +63,28 @@ if scenario == 'Loop filling':
             help='Type in the density of the gas. Pay attention to its units.',
             key='gas-density',
         )
+        st.markdown('**Liquid**')
+        liquid_flow_rate = st.slider(
+            label='Flow rate of the liquid [mL/min]',
+            min_value=0.0,
+            max_value=20.0,
+            value=10.0,
+            step=0.2,
+            help='Gas:Substrate stoichiometric ratio',
+            key='liquid-flow-rate',
+        )
+
 
 else:
     with st.sidebar:
         st.subheader('Experimental parameters:')
-        gas_equivalents = st.number_input(
+        st.markdown('**Gas**')
+        gas_equivalents = st.slider(
             label='Gas equivalents',
             min_value=0.0,
             max_value=20.0,
             value=10.0,
-            step=1.0,
+            step=0.5,
             help='Gas:Substrate stoichiometric ratio',
             key='equivalents',
         )
@@ -91,3 +106,5 @@ else:
             help='Type in the density of the gas. Pay attention to its units.',
             key='gas-density',
         )
+        st.markdown('**Liquid**')
+
