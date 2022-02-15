@@ -98,9 +98,16 @@ if scenario == 'Loop filling':
 
     with st.expander('How to calculate the solution:'):
         st.markdown('With the loop filling method, the stoichiometric ratio is simply determined by the **ratio of the molar flow rates**. Pressure (and volumes) are **not** relevant.')
+        st.markdown('The molar flow rate for the substrate is:')
         st.latex(
             r'''
-            \dot{n}_{substrate} = c_{substrate} \cdot \dot{v}_{substrate}
+            \dot{n}_{substrate} = Eq \cdot \dot{v}_{substrate}
+            '''
+        )
+        st.markdown('The molar flow rate for the gas is obtained considering the number of equivalents:')
+        st.latex(
+            r'''
+            \dot{n}_{gas} = c_{substrate} \cdot \dot{n}_{substrate}
             '''
         )
 
