@@ -231,7 +231,31 @@ else:
         st.markdown('The two conditions give the following linear system:')
         st.latex(
             r'''
-            
+            \begin{equation}
+                \begin{cases}
+                    \dot{v}_{gas, p} + \dot{v}_{substrate} = \dot{v}_{total} \\
+                    \dot{v}_{gas} - \frac{MW_{gas}}{\rho_{mass, gas}} \cdot Eq \cdot c_{substrate} \cdot \dot{v}_{substrate} = 0
+                \end{cases}
+            \end{equation}
+            '''
+        )
+        st.markdown('The system can be expressed in matrix notation and solved with `scipy.linalg.solve`:')
+        st.latex(
+            r'''
+            \begin{bmatrix}
+                \frac{}{} & 1 \\
+                1 & - \frac{MW_{gas}}{\rho_{mass, gas}} \cdot Eq \cdot c_{substrate}
+            \end{bmatrix}
+            \cdot
+            \begin{bmatrix}
+                \dot{v}_{gas} \\
+                \dot{v}_{substrate}
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                \dot{v}_{total} \\
+                0
+            \end{bmatrix}
             '''
         )
 
