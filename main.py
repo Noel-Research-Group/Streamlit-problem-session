@@ -8,6 +8,13 @@ D.Pintossi
 
 import streamlit as st
 
+# Streamlit page setup
+st.set_page_config(
+    page_title="Vial info encoder",  # label displayed by the browser
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 st.title('Stoichiometry in Gas-Liquid reactions')
 st.subheader('(in flow)')
 
