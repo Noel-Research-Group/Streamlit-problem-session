@@ -233,8 +233,8 @@ else:
             r'''
             \begin{equation}
                 \begin{cases}
-                    \dot{v}_{gas, p} + \dot{v}_{substrate} = \dot{v}_{total} \\
-                    \dot{v}_{gas} - \frac{MW_{gas}}{\rho_{mass, gas}} \cdot Eq \cdot c_{substrate} \cdot \dot{v}_{substrate} = 0
+                    \frac{1}{p}\dot{v}_{gas, STP} + \dot{v}_{substrate} = \dot{v}_{total} \\
+                    \dot{v}_{gas, STP} - \frac{MW_{gas}}{\rho_{mass, gas}} \cdot Eq \cdot c_{substrate} \cdot \dot{v}_{substrate} = 0
                 \end{cases}
             \end{equation}
             '''
