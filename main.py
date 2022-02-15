@@ -84,15 +84,16 @@ if scenario == 'Loop filling':
             key='liquid-concentration',
         )
 
+    loop_filling_result = volumetric_gas_flow_rate(
+        liquid_flow_rate=liquid_flow_rate,
+        liquid_concentration=liquid_concentration,
+        gas_equivalents=gas_equivalents,
+        molecular_weight=gas_molecular_weight,
+        mass_gas_density=gas_mass_density,
+    )
     st.metric(
-        label='Volumetric gas flow rate [mL/min]',
-        value=volumetric_gas_flow_rate(
-            liquid_flow_rate=liquid_flow_rate,
-            liquid_concentration=liquid_concentration,
-            gas_equivalents=gas_equivalents,
-            molecular_weight=gas_molecular_weight,
-            mass_gas_density=gas_mass_density,
-        )
+        label='Volumetric gas flow rate',
+        value=f'{loop_filling_result:5.2f} mL/min'
     )
 
 
