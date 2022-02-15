@@ -58,7 +58,7 @@ if scenario == 'Loop filling':
         gas_mass_density = st.number_input(
             label='Gas density [mg/mL]',
             min_value=0.0,
-            max_value=2.0,
+            max_value=5.0,
             value=1.00,
             step=0.01,
             help='Type in the density of the gas. Pay attention to its units.',
@@ -122,7 +122,7 @@ else:
         gas_mass_density = st.number_input(
             label='Gas density [mg/mL]',
             min_value=0.0,
-            max_value=2.0,
+            max_value=5.0,
             value=1.00,
             step=0.01,
             help='Type in the density of the gas. Pay attention to its units.',
