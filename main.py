@@ -104,7 +104,7 @@ else:
     with st.sidebar:
         st.subheader('Experimental parameters:')
         st.markdown('**Overall**')
-        residence_time = st.slider(
+        residence_time = st.number_input(
             label='Residence time [min]',
             min_value=0.0,
             max_value=30.0,
