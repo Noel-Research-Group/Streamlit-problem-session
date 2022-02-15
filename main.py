@@ -127,7 +127,7 @@ else:
             min_value=0.0,
             max_value=45.0,
             value=9.0,
-            step=1,
+            step=1.0,
             help='Type in the desired pressure. Mind the units.',
             key='pressure',
         )
