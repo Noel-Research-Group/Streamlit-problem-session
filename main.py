@@ -113,7 +113,7 @@ if scenario == 'Loop filling':
         st.markdown('The volumetric gas flow rate (STP) is:')
         st.latex(
             r'''
-            \dot{v}_{gas} = \frac{MW_{gas}}{\ro_{mass, gas}} \cdot \dot{n}_{gas}
+            \dot{v}_{gas} = \frac{MW_{gas}}{\rho_{mass, gas}} \cdot \dot{n}_{gas}
             '''
         )
 
