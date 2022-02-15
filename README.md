@@ -57,4 +57,4 @@ To verify that it worked, run the following command.
 ```
 conda list
 ```
-If `numpy`, `pandas`, `matplotlib`, and `streamlit` are showing up in the list of packages, you are good to go.
+If `numpy`, `pandas`, `matplotlib`, `scipy`, and `streamlit` are showing up in the list of packages, you are good to go.
