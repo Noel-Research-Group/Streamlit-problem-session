@@ -7,6 +7,7 @@ D.Pintossi
 """
 
 import streamlit as st
+from PIL import Image
 from gas_equations import *
 
 # Streamlit page setup
@@ -15,6 +16,21 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# Header with logos
+header = st.columns(7)
+nrg_logo = Image.open('NRG Logo_300dpi_ 863x400px.png')
+uva_logo = Image.open('UvA_logo.jpg')
+with header[0]:
+    st.image(
+        image=nrg_logo,
+        width=3,
+    )
+    with header[0]:
+        st.image(
+            image=uva_logo,
+            width=2,
+        )
 
 st.title('Stoichiometry in Gas-Liquid flow reactions')
 st.markdown('*D.Pintossi, February 2022*')
