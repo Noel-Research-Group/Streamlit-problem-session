@@ -12,7 +12,7 @@ from gas_equations import *
 
 # Streamlit page setup
 st.set_page_config(
-    page_title="Gas-Liquid flow reaction calculator",
+    page_title="Gas-Liquid flow reaction calculator",  # label displayed by the browser
     layout="wide",
     initial_sidebar_state="expanded"
 )
