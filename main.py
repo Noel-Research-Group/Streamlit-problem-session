@@ -273,7 +273,7 @@ else:
         residence_time=residence_time,
         reactor_volume=reactor_volume,
     )
-    columns = st.columns(3)
+    columns = st.columns(4)
     with columns[0]:
         st.metric(
             label='Volumetric gas flow rate (STP)',
@@ -289,6 +289,12 @@ else:
         st.metric(
             label='Volumetric liquid flow rate',
             value=f'{liquid_flow:5.2f} mL/min',
+            delta='Set this one on the pump',
+        )
+    with columns[3]:
+        st.metric(
+            label=f'Gas:Liquid volumetric ratio at {pressure} bar',
+            value=f'{gas_flow / (pressure * liquid_flow):.2%} mL/min',
             delta='Set this one on the pump',
         )
 
