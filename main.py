@@ -294,7 +294,6 @@ else:
     with columns[3]:
         st.metric(
             label=f'Gas:Liquid volumetric ratio at {pressure} bar',
-            value=f'{gas_flow / (pressure * liquid_flow):.2%} mL/min',
-            delta='Set this one on the pump',
+            value=f'{gas_flow / (pressure * liquid_flow):3.1%} mL/min',
         )
 
