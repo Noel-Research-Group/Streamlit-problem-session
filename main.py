@@ -296,6 +296,6 @@ else:
         GL_ratio = gas_flow / (pressure * liquid_flow)
         st.metric(
             label=f'Gas : Liquid ratio (vol.) at {pressure} bar',
-            value=f'{1 / GL_ratio:3.1f} : 1',
+            value=f'{GL_ratio:3.1f} : 1',
         )
 
