@@ -59,6 +59,7 @@ if scenario == 'Loop filling':
             max_value=40.0,
             value=10.0,
             step=0.1,
+            format='%f',
             help='Gas:Substrate stoichiometric ratio',
             key='equivalents',
         )
@@ -68,6 +69,7 @@ if scenario == 'Loop filling':
             max_value=1500.0,
             value=80.0,
             step=1.0,
+            format='%f',
             help='Type in the molecular weight of the gas. Pay attention to its units.',
             key='gas-MW',
         )
@@ -76,7 +78,7 @@ if scenario == 'Loop filling':
             min_value=0.0,
             max_value=5.0,
             value=1.00,
-            step=0.001,
+            step=0.01,
             format='%f',
             help='Type in the density of the gas. Pay attention to its units.',
             key='gas-density',
@@ -89,6 +91,7 @@ if scenario == 'Loop filling':
             max_value=1.5,
             value=0.5,
             step=0.005,
+            format='%f',
             help='Set the slider to the flow rate of the liquid. Mind the units.',
             key='liquid-flow-rate',
         )
@@ -98,6 +101,7 @@ if scenario == 'Loop filling':
             max_value=5.0,
             value=0.5,
             step=0.05,
+            format='%f',
             help='Type in the susbtrate concentration. Mind the units.',
             key='liquid-concentration',
         )
@@ -147,6 +151,7 @@ else:
             max_value=30.0,
             value=10.0,
             step=0.5,
+            format='%f',
             help='Set the slider to the desired residence time. Mind the units.',
             key='residence-time',
         )
@@ -156,6 +161,7 @@ else:
             max_value=15.0,
             value=5.0,
             step=0.1,
+            format='%f',
             help='Type in the desired reactor volume. Mind the units.',
             key='reactor-volume',
         )
@@ -165,6 +171,7 @@ else:
             max_value=45.0,
             value=9.0,
             step=1.0,
+            format='%f',
             help='Type in the desired pressure. Mind the units.',
             key='pressure',
         )
@@ -176,6 +183,7 @@ else:
             max_value=40.0,
             value=10.0,
             step=0.1,
+            format='%f',
             help='Gas:Substrate stoichiometric ratio',
             key='equivalents',
         )
@@ -185,6 +193,7 @@ else:
             max_value=1500.0,
             value=80.0,
             step=1.0,
+            format='%f',
             help='Type in the molecular weight of the gas. Pay attention to its units.',
             key='gas-MW',
         )
@@ -194,6 +203,7 @@ else:
             max_value=5.0,
             value=1.80,
             step=0.01,
+            format='%f',
             help='Type in the density of the gas. Pay attention to its units.',
             key='gas-density',
         )
@@ -205,6 +215,7 @@ else:
             max_value=5.0,
             value=0.1,
             step=0.05,
+            format='%f',
             help='Type in the susbtrate concentration. Mind the units.',
             key='liquid-concentration',
         )
@@ -279,18 +290,18 @@ else:
     with columns[0]:
         st.metric(
             label='Volumetric gas flow rate (STP)',
-            value=f'{gas_flow:5.2f} mL/min',
+            value=f'{gas_flow:5.3f} mL/min',
             delta='Set this one on the MFC',
         )
     with columns[1]:
         st.metric(
             label=f'Volumetric gas flow rate at {pressure} bar',
-            value=f'{gas_flow / pressure:5.2f} mL/min'
+            value=f'{gas_flow / pressure:5.3f} mL/min'
         )
     with columns[2]:
         st.metric(
             label='Volumetric liquid flow rate',
-            value=f'{liquid_flow:5.2f} mL/min',
+            value=f'{liquid_flow:5.3f} mL/min',
             delta='Set this one on the pump',
         )
     with columns[3]:
