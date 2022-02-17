@@ -130,8 +130,9 @@ if scenario == 'Loop filling':
         mass_gas_density=gas_mass_density,
     )
     st.metric(
-        label='Volumetric gas flow rate',
-        value=f'{loop_filling_result:5.2f} mL/min'
+        label='Volumetric gas flow rate (STP)',
+        value=f'{loop_filling_result:5.2f} mL/min',
+        delta='Set this one on the MFC',
     )
 
 else:
