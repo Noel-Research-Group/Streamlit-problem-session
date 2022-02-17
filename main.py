@@ -293,8 +293,9 @@ else:
             delta='Set this one on the pump',
         )
     with columns[3]:
+        GL_ratio = gas_flow / (pressure * liquid_flow)
         st.metric(
-            label=f'Gas:Liquid volumetric ratio at {pressure} bar',
-            value=f'{gas_flow / (pressure * liquid_flow):3.1%} mL/min',
+            label=f'Gas : Liquid ratio (vol.) at {pressure} bar',
+            value=f'{1 / GL_ratio:3.1f} : 1',
         )
 
