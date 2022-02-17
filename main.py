@@ -76,8 +76,8 @@ if scenario == 'Loop filling':
             min_value=0.0,
             max_value=5.0,
             value=1.00,
-            step=0.01,
-            format='%6.3f',
+            step=0.001,
+            format='%f',
             help='Type in the density of the gas. Pay attention to its units.',
             key='gas-density',
         )
