@@ -18,12 +18,12 @@ st.set_page_config(
 )
 
 # Header with logos
-header = st.columns([2, 1, 1, 1, 1, 1, 1, 1, 1])
+header = st.columns([1, 2, 1, 1, 1, 1, 1, 1, 1])
 nrg_logo = Image.open('NRG Logo_300dpi_ 863x400px.png')
 uva_logo = Image.open('UvA_logo.jpg')
-with header[0]:
+with header[1]:
     st.image(image=nrg_logo)
-with header[6]:
+with header[0]:
     st.image(image=uva_logo)
 
 st.title('Stoichiometry in Gas-Liquid flow reactions')
