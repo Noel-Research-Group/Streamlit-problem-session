@@ -39,6 +39,7 @@ with st.expander('Assumptions:'):
 st.markdown('___')
 
 # Selection of the experimental design
+# TODO move the selection to the sidebar (better for mobile view)
 scenario = st.radio(
     label='Select the configuration for your Gas-Liquid flow reaction:',
     options=['Loop filling', 'Continuous flow'],
@@ -63,6 +64,7 @@ if scenario == 'Loop filling':
             help='Gas:Substrate stoichiometric ratio',
             key='equivalents',
         )
+        # TODO implement selection of gas name and import of data from table
         gas_molecular_weight = st.number_input(
             label='Gas molecular weight [mg/mmol]',
             min_value=0.0,
