@@ -19,7 +19,6 @@ To manage Python packages (pre-built, open-source code) and virtual environement
 To use Conda, install Anaconda Individual Edition from [here](https://www.anaconda.com/products/individual).
 
 #### 3. Clone the repository
-(**Note:** the repository is a work in progress, so wait till Thursday)
 
 PyCharm should guide you to create a project when first opened. If that is not the case, choose `File` from the menu, then `New Project...`.
 Keep the default location, unless you have a valid reason to change it, and choose the project name (the folder will have the same name).
