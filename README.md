@@ -50,7 +50,7 @@ Click on the gear icon, select `Conda Environment`, leave everything as it is, e
 
 #### 5. Install the requirements
 
-At the bottom, choose the Terminal tab. Write the following code and hit enter.
+At the bottom, choose the `Terminal` tab. Write the following code and hit enter.
 ```
 pip install -r requirements.txt
 ```
@@ -59,3 +59,13 @@ To verify that it worked, run the following command.
 conda list
 ```
 If `numpy`, `pandas`, `matplotlib`, `scipy`, and `streamlit` are showing up in the list of packages, you are good to go.
+
+___
+
+### Running the web app locally
+
+Go to the `Terminal` tab at the bottom of the PyCharm CE graphical user interface and run the following command:
+```
+streamlit run Streamlit_GUI.py
+```
+A browser window (or a new tab) should open with the Streamlit app in it. To terminate the execution, go back to the `Terminal` and press `ctrl+C`.
